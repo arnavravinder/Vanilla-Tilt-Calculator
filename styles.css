@@ -112,3 +112,53 @@ button.equal:hover {
     display: none;
 }
 
+.chat-header {
+    background: #333;
+    color: #00ffa8;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.chat-content {
+    padding: 10px;
+    height: 300px;
+    overflow-y: auto;
+}
+
+.chat-input {
+    display: flex;
+    border-top: 1px solid #333;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 10px;
+    background: #444;
+    border: none;
+    color: white;
+    border-radius: 0 0 0 10px;
+}
+
+.chat-input button {
+    background: #00ffa8;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    color: #333;
+    border-radius: 0 0 10px 0;
+}
+
+.message {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    background: #555;
+    color: white;
+}
+
+.user-message {
+    background: #00ffa8;
+    color: #333;
+    align-self: flex-end;
+}
