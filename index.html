@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPT Calc</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+</head>
+<body>
+    <div id="background-animation"></div>
+    <div class="container">
+        <div class="calculator" data-tilt>
+            <div class="display" id="display">0</div>
+            <div class="buttons">
+                <button onclick="clearDisplay()">C</button>
+                <button onclick="deleteLast()">←</button>
+                <button onclick="appendSymbol('%')">%</button>
+                <button onclick="appendSymbol('/')">/</button>
+                <button onclick="appendSymbol('7')">7</button>
+                <button onclick="appendSymbol('8')">8</button>
+                <button onclick="appendSymbol('9')">9</button>
+                <button onclick="appendSymbol('*')">*</button>
+                <button onclick="appendSymbol('4')">4</button>
+                <button onclick="appendSymbol('5')">5</button>
+                <button onclick="appendSymbol('6')">6</button>
+                <button onclick="appendSymbol('-')">-</button>
+                <button onclick="appendSymbol('1')">1</button>
+                <button onclick="appendSymbol('2')">2</button>
+                <button onclick="appendSymbol('3')">3</button>
+                <button onclick="appendSymbol('+')">+</button>
+
+                <button class="chatgpt-button" onclick="toggleChatBox()">
+                    <img src="chatgpt-logo.png" alt="ChatGPT Logo">
+                </button>
+                <button onclick="appendSymbol('0')">0</button>
+                <button onclick="appendSymbol('.')">.</button>
+                <button class="equal" onclick="calculateResult()">=</button>
+            </div>
+        </div>
+        <div class="chat-box" id="chat-box">
+            <div class="chat-header">ChatGPT Math Helper</div>
+            <div class="chat-content" id="chat-content">
+                <div class="message bot-message">Hi! I am here to help you with math. Ask me anything!</div>
+            </div>
+            <div class="chat-input">
+                <input type="text" id="chat-input" placeholder="Type your math question here..." onkeypress="sendMessage(event)">
+                <button onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
